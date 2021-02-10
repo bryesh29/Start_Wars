@@ -4,13 +4,18 @@ import "./App.css";
 import Routes from "./pages/Routes";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import AppTheme from "./styles/appTheme";
+import { useStylesBase } from "./styles/stylesBase";
 
 function App() {
+  const classesBase = useStylesBase();
+
   return (
     <div className="App">
       <ThemeProvider theme={AppTheme}>
         <CssBaseline />
-        <Routes />
+        <div className={classesBase.overrides}>
+          <Routes />
+        </div>
       </ThemeProvider>
     </div>
   );

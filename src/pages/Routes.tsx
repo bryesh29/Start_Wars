@@ -10,7 +10,7 @@ export default function Routes() {
         <Route exact path="/">
           <AllCharacters />
         </Route>
-        <Route path="/characters">
+        <Route path="/characters/:id">
           <Character />
         </Route>
       </Switch>
